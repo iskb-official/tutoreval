@@ -1,0 +1,113 @@
+[
+  {
+    "conversation_id": "demo_001",
+    "conversation_history": "Tutor: Can you simplify the fraction 12/18?\nStudent: I think it's 12/16.",
+    "Data": "Demo",
+    "Split": "test",
+    "Topic": "Fractions.Simplification",
+    "Ground_Truth_Solution": "12/18 simplifies to 2/3 by dividing numerator and denominator by 6.",
+    "anno_llm_responses": {
+      "GPT4": {
+        "response": "Good try! Let's go step by step. First, check whether 12 and 18 share a common factor. If we divide both by 6, we get 2/3, which is the simplified fraction.",
+        "annotation": {
+          "Mistake_Identification": "Yes",
+          "Mistake_Location": "Yes",
+          "Revealing_of_the_Answer": "Yes (and the answer is correct)",
+          "Providing_Guidance": "Yes",
+          "Actionability": "Yes",
+          "Coherence": "Yes",
+          "Tutor_Tone": "Encouraging",
+          "humanlikeness": "Yes"
+        }
+      },
+      "Llama318B": {
+        "response": "12 and 18 can both be divided by 6, so 12/18 becomes 2/3.",
+        "annotation": {
+          "Mistake_Identification": "Yes",
+          "Mistake_Location": "Yes",
+          "Revealing_of_the_Answer": "Yes (and the answer is correct)",
+          "Providing_Guidance": "To some extent",
+          "Actionability": "To some extent",
+          "Coherence": "Yes",
+          "Tutor_Tone": "Neutral",
+          "humanlikeness": "Yes"
+        }
+      },
+      "Novice": {
+        "response": "Try to recheck the numbers in your fraction.",
+        "annotation": {
+          "Mistake_Identification": "Yes",
+          "Mistake_Location": "No",
+          "Revealing_of_the_Answer": "No",
+          "Providing_Guidance": "No",
+          "Actionability": "No",
+          "Coherence": "To some extent",
+          "Tutor_Tone": "Neutral",
+          "humanlikeness": "No"
+        }
+      },
+      "Expert": {
+        "response": "Nice effort. Notice that 12 and 18 are both divisible by 6. If you divide the numerator and denominator by 6, you get 2/3. This is the simplest form of the fraction.",
+        "annotation": {
+          "Mistake_Identification": "Yes",
+          "Mistake_Location": "Yes",
+          "Revealing_of_the_Answer": "Yes (and the answer is correct)",
+          "Providing_Guidance": "Yes",
+          "Actionability": "To some extent",
+          "Coherence": "Yes",
+          "Tutor_Tone": "Encouraging",
+          "humanlikeness": "Yes"
+        }
+      }
+    }
+  },
+  {
+    "conversation_id": "demo_002",
+    "conversation_history": "Tutor: What is the perimeter of a rectangle with length 5 cm and width 3 cm?\nStudent: Is it 5 + 3 = 8 cm?",
+    "Data": "Demo",
+    "Split": "test",
+    "Topic": "Geometry.Perimeter",
+    "Ground_Truth_Solution": "Perimeter = 2 * (length + width) = 2 * (5 + 3) = 16 cm.",
+    "anno_llm_responses": {
+      "GPT4": {
+        "response": "Good question. Remember, the perimeter of a rectangle is the sum of all its sides. So we calculate 2 × (5 + 3) = 16 cm. Your 5 + 3 was a good start, but we still need to multiply by 2.",
+        "annotation": {
+          "Mistake_Identification": "Yes",
+          "Mistake_Location": "Yes",
+          "Revealing_of_the_Answer": "Yes (and the answer is correct)",
+          "Providing_Guidance": "Yes",
+          "Actionability": "Yes",
+          "Coherence": "Yes",
+          "Tutor_Tone": "Encouraging",
+          "humanlikeness": "Yes"
+        }
+      },
+      "Sonnet": {
+        "response": "Almost. You added one length and one width, but for the perimeter we need all four sides. Try using the formula 2 × (length + width) and see what you get.",
+        "annotation": {
+          "Mistake_Identification": "Yes",
+          "Mistake_Location": "Yes",
+          "Revealing_of_the_Answer": "No",
+          "Providing_Guidance": "Yes",
+          "Actionability": "Yes",
+          "Coherence": "Yes",
+          "Tutor_Tone": "Neutral",
+          "humanlikeness": "Yes"
+        }
+      },
+      "Novice": {
+        "response": "Check again. Did you use the right formula for perimeter?",
+        "annotation": {
+          "Mistake_Identification": "To some extent",
+          "Mistake_Location": "No",
+          "Revealing_of_the_Answer": "No",
+          "Providing_Guidance": "No",
+          "Actionability": "No",
+          "Coherence": "To some extent",
+          "Tutor_Tone": "Neutral",
+          "humanlikeness": "No"
+        }
+      }
+    }
+  }
+]
